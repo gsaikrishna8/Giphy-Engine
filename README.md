@@ -37,17 +37,8 @@ Open http://localhost:5173 in your browser.
 - `npm run lint` — run ESLint (if configured)
 - `npm test` — run tests (if configured)
 
-## Project structure (high level)
-- `src/Search.tsx` — search input, state, and fetch logic
-- `src/GifList.tsx` — GIF rendering component
-- `src/App.tsx` — root component
-- `index.html`, `vite.config.ts` — Vite config and entry
 
-## Notes
-- The app reads the API key via `import.meta.env.VITE_GIPHY_API_KEY`.
-- Keep your API key secret; do not commit secrets to the repository.
 
-## License
-Add a LICENSE file if you plan to publish this repository publicly.
+
 
 ![alt text](image-1.png)
