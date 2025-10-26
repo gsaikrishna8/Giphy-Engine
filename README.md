@@ -2,16 +2,52 @@
 
 A minimal React + TypeScript + Vite app that lets you search Giphy and view results.
 
-Features
+## Features
 - Search Giphy by query and display GIFs
-- Simple component structure: search logic in `Search` and rendering in `GifList`
-- Uses environment variable `VITE_GIPHY_API_KEY` for the API key
+- Simple component structure: `Search` handles input and fetch logic, `GifList` renders results
+- Uses Vite environment variable `VITE_GIPHY_API_KEY` for the API key
 
-Getting started
+## Prerequisites
+- Node.js 18+ (or LTS)
+- npm
+
+## Getting started
 
 1. Install dependencies
 ```bash
 npm install
+```
 
+2. Create a `.env` file in the project root and add your Giphy API key:
+```env
+VITE_GIPHY_API_KEY=your_api_key_here
+```
+
+3. Start the dev server
+```bash
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+## Available scripts
+- `npm run dev` — start dev server
+- `npm run build` — build for production
+- `npm run preview` — preview production build
+- `npm run lint` — run ESLint (if configured)
+- `npm test` — run tests (if configured)
+
+## Project structure (high level)
+- `src/Search.tsx` — search input, state, and fetch logic
+- `src/GifList.tsx` — GIF rendering component
+- `src/App.tsx` — root component
+- `index.html`, `vite.config.ts` — Vite config and entry
+
+## Notes
+- The app reads the API key via `import.meta.env.VITE_GIPHY_API_KEY`.
+- Keep your API key secret; do not commit secrets to the repository.
+
+## License
+Add a LICENSE file if you plan to publish this repository publicly.
 
 ![alt text](image-1.png)
